@@ -7,18 +7,18 @@ export * from './activity'
 
 
 // personal info
-export const name = 'Corey Chiu'
-export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
-export const introduction = 'I’m Corey, a software engineer based in Shenzhen, China. I like coding, and building interesting things'
-export const email = 'xxx@gmail.com'
-export const githubUsername = 'iamcorey'
+export const name = 'Patrick Zhiji Yu'
+export const headline = 'Software engineer, Full-Stack web developer'
+export const introduction = 'I’m Patrick, a software engineer based in Sydney. I like coding, and building interesting things'
+export const email = 'yuzhiji1991@gmail.com'
+export const githubUsername = 'PatrickYuzhiji'
 
 // about page
-export const aboutMeHeadline = "I'm Corey Chiu, a software engineer based in Shenzhen, China."
+export const aboutMeHeadline = "I'm Patrick Zhiji Yu, a software engineer based in Sydney."
 export const aboutParagraphs = [
-  "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
-  "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
-  "I'm working as a software develop engineer in Shenzhen, China now. And I'm building a lot of side projects in my spare time."
+  "I just finished my master's degree in Computer Science at the University of Wollongong.",
+  "I keep building side projects in my spare time.",
+  "Sometimes I like to cook, sometimes I like to travel, but always I like to take a walk in nature."
 ]
 
 
@@ -38,45 +38,21 @@ export type SocialLinkType = {
 
 export const socialLinks: Array<SocialLinkType> = [
   {
-    name: 'X',
-    icon: 'x',
-    href: 'https://x.com/realcoreychiu',
-    external: true
-  },
-  {
-    name: 'Bsky',
-    icon: 'bsky',
-    href: 'https://bsky.app/profile/coreychiu.com',
-    external: true
-  },
-  {
-    name: 'Jike',
-    icon: 'pill',
-    href: 'https://okjk.co/P7c1zU',
-    external: true
-  },
-  {
     name: 'Github',
     icon: 'github',
-    href: 'https://github.com/iamcorey',
+    href: 'https://github.com/PatrickYuzhiji',现在
     external: true
   },
   {
-    name: 'Wechat',
-    icon: 'wechat',
-    href: 'https://mp.weixin.qq.com/s/DxnRgqNfgzXIhqj6w_x0dQ',
+    name: 'LinkedIn',
+    icon: 'linkedin',
+    href: 'https://www.linkedin.com/in/patrick-zhiji-yu',
     external: true
   },
   {
-    name: 'Discord',
-    icon: 'discord',
-    href: 'https://discord.gg/xTxRg3Ej',
-    external: true
-  },
-  {
-    name: 'Ko-fi',
-    icon: 'coffee',
-    href: 'https://ko-fi.com/coreychiu',
+    name: 'Note',
+    icon: 'note',
+    href: 'https://www.xiaohongshu.com/user/profile/61f7ec2f000000001000a996?xsec_token=YBEl5fnzRON6Gi7Rzr9VFW1eo-12F8ylD1Nl9FwTwqP4A=&xsec_source=app_share&xhsshare=WeixinSession&appuid=61f7ec2f000000001000a996&apptime=1756536680&share_id=07e108186982406a95250dafc9af8694&wechatWid=5e3d3ea0d8d45a53ac50cc7b03ac2a06&wechatOrigin=menu',
     external: true
   }
 ]
