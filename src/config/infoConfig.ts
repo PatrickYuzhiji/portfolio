@@ -40,7 +40,7 @@ export const socialLinks: Array<SocialLinkType> = [
   {
     name: 'Github',
     icon: 'github',
-    href: 'https://github.com/PatrickYuzhiji',现在
+    href: 'https://github.com/PatrickYuzhiji',
     external: true
   },
   {
