@@ -45,7 +45,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="mt-6 border-t border-zinc-100 py-8 dark:border-zinc-700/40">
-          {/* <GithubContributions /> */}
+          <GithubContributions />
           <GitHubSnake />
         </div>
         {/* projects */}

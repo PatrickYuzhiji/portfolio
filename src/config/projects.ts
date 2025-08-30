@@ -117,9 +117,9 @@ export type ProjectItemType = {
       gitForks: 67
     },
     {
-      name: 'Corey Chiu Portfolio Template',
+      name: 'Patrick Zhiji Yu Portfolio Template',
       description:
-        'portfolio template by corey chiu',
+        'portfolio template by Patrick Zhiji Yu',
       link: { href: 'github.com/iAmCorey/coreychiu-portfolio-template', label: 'Corey Chiu Portfolio Template' },
       gitStars: 229,
       gitForks: 30
