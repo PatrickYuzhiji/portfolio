@@ -14,6 +14,7 @@ import {
   DiscordLogoIcon,
   LinkedinLogoIcon,
   NoteIcon,
+  ReadCvLogoIcon,
 } from '@phosphor-icons/react'
 
 export function CustomIcon({ name, size = 20 }: { name: string; size?: number }) {
@@ -44,6 +45,8 @@ export function CustomIcon({ name, size = 20 }: { name: string; size?: number })
       return <LinkedinLogoIcon size={size} weight="duotone" />;
     case "note":
       return <NoteIcon size={size} weight="duotone" />;
+    case "readcv":
+      return <ReadCvLogoIcon size={size} weight="duotone" />;
     default:
       return null
   }

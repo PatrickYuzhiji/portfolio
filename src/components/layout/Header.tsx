@@ -361,19 +361,19 @@ export function Header() {
                       style={{ transform: 'var(--avatar-image-transform)' }}
                     />
                     <div
-                      className="text-3xl md:text-6xl font-bold tracking-tight flex flex-row"
+                      className="text-3xl md:text-6xl font-bold tracking-tight flex flex-row items-center gap-2"
                       style={{
                         opacity: 'var(--avatar-hi-opacity, 0)',
                         transform: 'var(--avatar-hi-transform)'
                       }}
                     >
-                      Hi,{' '}
+                      <span>Hi, I&apos;m</span>
                       <TypingAnimation
                         className="text-3xl md:text-6xl font-bold tracking-tight"
-                        text={`I'm ${name} `}
+                        text={`${name} `}
                         duration={150}
                       />
-                      👋
+                      <span>👋</span>
                     </div>
                   </div>
                 </div>

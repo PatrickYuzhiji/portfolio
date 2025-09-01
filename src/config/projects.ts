@@ -1,167 +1,201 @@
 // projects
 export const projectHeadLine = "What I've done and what I'm doing."
-export const projectIntro = "I've worked on a variety of projects, from simple websites to complex web applications. And many of them are open-source. Here are a few of my favorites."
+export const projectIntro = "I've worked on a variety of projects, from web to mobile applications. Here are a few of my favorites."
 
 export type ProjectItemType = {
+    Id: string
     name: string
     description: string
-    link: { href: string, label: string }
-    date?: string
-    logo?: string,
-    category?: string[],
-    tags?: string[],
-    image?: string,
-    techStack?: string[],
-    gitStars?: number,
-    gitForks?: number
+    link: string
+    liveUrl?: string
+    gitHubUrl?: string
+    Details?: string[]
+    techStack?: string[]
+    logo?: string
+    screenshot?: string
   }
   
   // projects 
-  export const projects: Array<ProjectItemType> = [
+  export const projectsWeb: Array<ProjectItemType> = [
     {
-      name: '轻息',
+      Id: 'ITTechWebsite',
+      name: 'Antenna & IT Support',
       description:
-        '一款呼吸训练、缓解压力、提升专注力的“小而美”app',
-      link: { href: 'apps.apple.com/us/app/%E8%BD%BB%E6%81%AF/id6742171445', label: '轻息' },
-      category: ['App'],
-      techStack: ['SwiftUI'],
-      tags: ['App', 'iOS'],
-      logo: '/images/icon/breathe-app-icon.png',
+        'Next.js IT support site with CMS, email automation, SEO, antenna, security, and support services.',
+      link: '/projects/ITTechWebsite',
+      liveUrl: 'https://antenna-1gcp.vercel.app/',
+      gitHubUrl: 'https://github.com/PatrickYuzhiji/antenna',
+      Details: [
+        "Built a mobile-first, responsive user interface using Next.js 15 and Tailwind CSS 4.0, with reusable TypeScript-based components and accessible, branded design",
+        "Integrated Resend for dual automated email workflows, sending structured admin notifications and customer confirmations with custom React email templates",
+        "Implemented Sanity CMS for headless blog management with rich content editing, author management, image optimization, and live content preview",
+        "Optimized for SEO with structured data, dynamic sitemaps, robots.txt, Open Graph metadata, and local business schema targeting Wollongong area",
+        "Deployed on Vercel with serverless architecture ensuring zero server maintenance, supporting real-time updates on GitHub push with zero downtime",
+        "A real-world paid project developed independently for a digital agency"
+      ],
+      techStack: ['NextJS',
+      'TypeScript',
+      'TailwindCSS',
+      'SanityCMS',
+      'Resend',
+      'Vercel'],
+      logo: '/images/icon/antenna-logo.png',  
+      screenshot: '/images/projects/ITTechWebsite.webp',
     },
     {
-      name: 'SEO Explore',
+      Id: 'EasyEV',
+      name: 'EasyEV Charging',
       description:
-        'Explore all the best SEO tools in one place.',
-      link: { href: 'seoexplore.com', label: 'SEO Explore' },
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['SEO']
+        'EV charging Station management with real-time tracking.',
+      link: '/projects/EasyEV',
+      liveUrl: 'https://easyev.infinityfreeapp.com/',
+      gitHubUrl: 'https://github.com/PatrickYuzhiji/EasyEV-Charging-Project',
+      Details: [
+        "Developed role-based system with separate interfaces and capabilities for administrators and users, enhancing usability and data control",
+        "Implemented real-time location availability tracking and session-based cost calculation using PHP and MySQL with foreign key constraints",
+        "Created responsive frontend using HTML, CSS, and JavaScript, including location management dashboard, user registration, and charging session views",
+        "Enabled auto-generation of database schema and sample data on first run, simplifying deployment across environments",
+        "Deployed application on InfinityFree free hosting platform with manual database setup and PHP environment configuration"
+      ],
+      techStack: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      logo: '/images/icon/EasyEV-logo.png',
+      screenshot: '/images/projects/EasyEV.webp',
     },
     {
-      name: 'GitHub Cards',
+      Id: 'BadgerChat',
+      name: 'BadgerChat',
       description:
-        'Showcase your GitHub contributions into stunning visual cards.',
-      link: { href: 'github.cards', label: 'GitHub Cards' },
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['Visual Cards', 'GitHub Contribution Cards']
+        'A small frontend project enabling real-time communication in various chatrooms.',
+      link: '/projects/BadgerChat',
+      gitHubUrl: 'https://github.com/PatrickYuzhiji/BadgerChat',
+      Details: [
+        "Implemented user authentication with registration, login, logout, and session persistence using context API and sessionStorage, ensuring seamless user experiences",
+        "Built message posting, pagination, and deletion features with fetch API, enforcing role-based access control and efficient state management using React Hooks (useState, useEffect, useContext)",
+        "Ensured form validation and accessibility by integrating regular expressions, semantic HTML, and labeled form controls, improving security and user experience"
+      ],
+      techStack: ['React', 'Bootstrap', 'Vite'],
+      logo: '/images/icon/BadgerChat-logo.png',
+      screenshot: '/images/projects/BadgerChat.webp',
     },
     {
-      name: 'AI Best Tools',
+      Id: 'EasyParking',
+      name: 'EasyParking Portal',
       description:
-        'Find the best AI tools in AIBest.tools',
-      link: { href: 'aibest.tools', label: 'AI Best Tools' },
-      logo: 'images/icon/aibesttools.png',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['AI', 'Tools Directory']
+        'A full-stack project for managing parking spaces, allowing users to log in, check in/out.',
+      link: '/projects/EasyParking',
+      Details: [
+        "Implemented administrator features enabling managers to add/remove parking lots and spaces, insert/edit parking locations, search parking spots, and view user data",
+        "Created backend services as RESTful APIs using Python, FastAPI, and Postman, and designed a user-friendly interface using HTML5, CSS, JavaScript, and jQuery",
+        "Utilized Docker to containerize MySQL, leveraging SQLAlchemy's ORM capabilities for data operations such as create, read, update, and delete"
+      ],
+      techStack: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Python',
+        'FastAPI',
+        'MySQL',
+        'SQLAlchemy',
+        'Docker',
+        'jQuery',
+        'Postman'
+      ],
+      logo: '/images/icon/EasyParking-logo.png',
+      screenshot: '/images/projects/EasyParking.webp',
     },
     {
-      name: 'Best Directories',
+      Id: 'GiphySearch',
+      name: 'Giphy Search',
       description:
-        'Your ultimate directory of directories.',
-      link: { href: 'bestdirectories.org', label: 'Best Directories' },
-      logo: '/images/icon/bestdirectories.png',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['Directory of Directories']
-    },
-    {
-      name: 'User Growth',
-      description:
-        'Boost Your business growth with UserGrowth.link',
-      link: { href: 'usergrowth.link', label: 'User Growth' },
-      logo: '/images/icon/usergrowth.ico',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['User Growth', 'Marketing', 'SEO']
-    },
-    {
-      name: 'Dev Toolset',
-      description:
-        'Open-source database-free tools directory.',
-      link: { href: 'devtoolset.net', label: 'Dev Toolset' },
-      logo: '/images/icon/devtoolset.png',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['Open Source', 'Database-Free', 'Tools Directory']
-    },
-    {
-      name: 'Domain Score',
-      description:
-        'Ultimate AI-Powered tool for domain scoring and evaluation',
-      link: { href: 'domainscore.ai', label: 'Domain Score' },
-      logo: '/images/icon/domainscore.png',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['Domain', 'AI', 'SEO']
-    },
-    {
-      name: 'MagicBox Tools',
-      description:
-        'Find the best AI tools in MagicBox.tools',
-      link: { href: 'magicbox.tools', label: 'MagicBox Tools' },
-      logo: '/images/icon/magicbox.png',
-      category: ['Website'],
-      techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-      tags: ['AI', 'Tools Directory']
+        'A single-page app to search and browse GIFs using the Giphy API.',
+      link: '/projects/GiphySearch',
+      gitHubUrl: 'https://github.com/PatrickYuzhiji/GiphySearchApp',
+      Details: [
+        "Implemented pagination, search, loading indicators, and copy-to-clipboard functionality for each GIF",
+        "Employed React Context API for state management (search term, pagination, loading states)",
+        "Styled the UI with React Bootstrap and custom CSS, ensuring a clean, modern interface",
+        "Configured a serverless workflow for deployment via AWS (S3 + CloudFront) and maintained build scripts for production readiness"
+      ],
+      techStack: ['React', 'Bootstrap', 'AWS', 'Serverless', 'Axios'],
+      logo: '/images/icon/GiphySearch-logo.png',
+      screenshot: '/images/projects/GiphySearch.webp',
     },
   ]
-  
-  export const githubProjects: Array<ProjectItemType> = [
-    {
-      name: 'Devtoolset',
-      description: 'Open-source & database-free developer tools navigator / 开源无数据库配置的开发者工具导航站',
-      link: { href: 'github.com/iAmCorey/devtoolset', label: 'Devtoolset' },
-      gitStars: 203,
-      gitForks: 67
-    },
-    {
-      name: 'Patrick Zhiji Yu Portfolio Template',
-      description:
-        'portfolio template by Patrick Zhiji Yu',
-      link: { href: 'github.com/iAmCorey/coreychiu-portfolio-template', label: 'Corey Chiu Portfolio Template' },
-      gitStars: 229,
-      gitForks: 30
-    },
-    {
-      name: 'Chrome Extension Plasmo Template',
-      description:
-        'A chrome extension template using plasmo, tailwind css, shadcn/ui',
-      link: { href: 'github.com/iAmCorey/chrome-extension-plasmo-template', label: 'Chrome Extension Plasmo Template' },
-      gitStars: 54,
-      gitForks: 10
-    },
-    {
-      name: 'Awesome Indie Hacker Tools',
-      description:
-        '独立开发/出海开发相关技术栈及工具收录 / Find the best tools for indie hackers here',
-      link: { href: 'github.com/iAmCorey/awesome-indie-hacker-tools', label: 'Awesome Indie Hacker Tools' },
-      gitStars: 815,
-      gitForks: 69
-    },
-    {
-      name: 'Awesome AI Directory',
-      description:
-        'AI资源工具导航站收录 / Find all the best AI directories',
-      link: { href: 'github.com/iAmCorey/awesome-ai-directory', label: 'Awesome AI Directory' },
-      gitStars: 40,
-      gitForks: 7
-    },
-    {
-      name: 'Producthunt Daily Bot',
-      description:
-        'A bot getting product hunt daily top products',
-      link: { href: 'github.com/iAmCorey/producthunt-daily-bot', label: 'Producthunt Daily Bot' },
-      gitStars: 3,
-      gitForks: 3
-    },
-    {
-      name: 'Cantonese Echoes',
-      description:
-        'Cantonese Echoes / 粵語殘片',
-      link: { href: 'github.com/iAmCorey/Cantonese-Echoes', label: 'Cantonese Echoes' },
-      gitStars: 1
-    },
-  ]
-  
+
+// 为了兼容性，添加 projects 导出
+export const projects = projectsWeb
+
+export const projectsMobile: Array<ProjectItemType> = [
+     {
+       Id: 'SLACA',
+       name: 'SLACA - Student Lifestyle and Academic Convenience Aid',
+       description:
+         'A smart and student-centric platform that integrates community interaction and an AI-powered assistant to enhance university life.',
+       link: '/projects/SLACA',
+       liveUrl: 'https://youtu.be/BfHOfMSaIE0/',
+       Details: [
+         "Designed and built a modular full-stack application using FastAPI for backend services and React-based frontend modules for seamless student interaction",
+         "Implemented LLM-powered chatbot enhanced with Retrieval-Augmented Generation (RAG) to deliver contextual, evolving responses based on user-generated content",
+         "Developed key modules including Circle (community posts), Study (course/program explorer), Media (event updates), Vendor (student deals), and Me (profile and contribution tracking)",
+         "Integrated gamification through point-based participation rewards, enhancing student engagement within communities",
+         "Collaborated within a 5-person interdisciplinary team and received supervision from Prof. Lei Wang, achieving High Distinction for innovation and impact"
+       ],
+       techStack: ['FastAPI', 'React', 'PostgreSQL', 'Python', 'TypeScript'],
+       logo: '/images/icon/SLACA-logo.png',
+       screenshot: '/images/projects/SLACA.webp',
+     },
+     {
+       Id: 'SoilSwellApp',
+       name: 'Soil Swell Potential Prediction',
+       description:
+         'A fully offline application to predict the swelling potential of soils.',
+       link: '/projects/SoilSwellApp',
+       liveUrl: 'https://youtube.com/shorts/z3A3B9INcyg?feature=share',
+       Details: [
+         "Built an intuitive user interface using React Native and Expo, incorporating AsyncStorage, FileSystem, and Sharing for efficient data storage and management",
+         "Integrated and deployed optimized machine learning models (ONNX) using onnxruntime-react-native, enabling real-time, offline predictions directly on mobile devices",
+         "Awarded a $6,000 scholarship through the UOW EIS Summer Scholarship Program in recognition of contributions to this innovative project",
+         "Note: Due to the proprietary nature of the project, the codebase is not publicly available"
+       ],
+       techStack: ['ReactNative', 'Expo', 'ONNX'],
+       logo: '/images/icon/SwellApp-logo.png',
+       screenshot: '/images/projects/SoilSwellApp.webp',
+     },
+   ]
+
+     export const projectsMore: Array<ProjectItemType> = [
+     {
+       Id: 'UK2007SpamDetection',
+       name: 'UK2007 Spam Detection Analysis',
+       description:
+         'A comprehensive machine learning school project focused on detecting web spam.',
+       link: '/projects/UK2007SpamDetection',
+       gitHubUrl: 'https://github.com/PatrickYuzhiji/datamining',
+       Details: [
+         "Analyzed three types of features — Direct, Link-based (transformed), and Content-based — to determine the best predictors of web spam",
+         "Applied machine learning models including Logistic Regression, Random Forest, and SVM using R and evaluated with cross-validation",
+         "Performed feature set combination analysis to test additive performance effects and ranked models using AUC as the primary metric",
+         "Automated full report generation with RMarkdown, including plots, tables, and ROC curves for each classifier-feature combination",
+         "Provided domain-specific discussion on spam detection strategies and summarized insights into feature importance and classifier behavior"
+       ],
+       techStack: ['R', 'RStudio', 'Markdown'],
+       logo: '/images/icon/UK2007SpamDetection-logo.png',
+       screenshot: '/images/projects/UK2007SpamDetection.webp',
+     },
+     {
+       Id: 'GradConnectionScraper',
+       name: 'GradConnection Job Scraper',
+       description:
+         'A web crawler using the Scrapy framework to extract job listings from GradConnection Australia.',
+       link: '/projects/GradConnectionScraper',
+       gitHubUrl: 'https://github.com/PatrickYuzhiji/GradConnection-Job-Scraper',
+       Details: [
+         "Developed a robust Scrapy-based crawler to collect and parse job listings including title, company, type, location, deadline, and direct link",
+         "Implemented pagination handling and flexible job category filtering through customizable start URLs for various disciplines",
+         "Structured data pipeline with modular components for items, pipelines, and custom middlewares"
+       ],
+       techStack: ['Python', 'Scrapy'],
+       logo: '/images/icon/GradConnectionScraper-logo.png',
+       screenshot: '/images/projects/GradConnectionScraper.webp',
+     },
+   ]

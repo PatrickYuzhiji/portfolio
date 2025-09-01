@@ -23,9 +23,14 @@ export const aboutParagraphs = [
 
 
 // blog
-export const blogHeadLine = "What I've thinking about."
-export const blogIntro = "I've written something about AI, programming and life."
+// export const blogHeadLine = "What I've thinking about."
+// export const blogIntro = "I've written something about AI, programming and life."
 
+// about page
+export const EducationHeadLine = "Education"
+export const EducationIntro = "I just finished my master's degree in Computer Science at the University of Wollongong."
+export const CareerHeadLine = "Work"
+export const CareerIntro = "I work as a software engineer"
 
 // social links
 export type SocialLinkType = {

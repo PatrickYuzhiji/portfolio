@@ -2,7 +2,9 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { aboutMeHeadline, aboutParagraphs } from '@/config/infoConfig'
+import { aboutMeHeadline, aboutParagraphs, EducationHeadLine, EducationIntro, CareerHeadLine, CareerIntro } from '@/config/infoConfig'
+import Career from '@/components/home/Career'
+import Education from '@/components/home/Education'
 import { Container } from '@/components/layout/Container'
 
 import portraitImage from '@/images/portrait.jpg'
@@ -14,7 +16,7 @@ import SocialLinks from '@/components/about/SocialLinks'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Hi, I am Patrick Zhiji Yu, a software engineer based in Shenzhen, China.',
+    'Hi, I am Patrick Zhiji Yu, a software engineer based in Sydney, Australia.',
 }
 
 export default function About() {
@@ -47,6 +49,17 @@ export default function About() {
           <SocialLinks />
         </div>
       </div>
+
+      <div className="mx-auto flex flex-col max-w-xl gap-6 py-8 my-8 lg:max-w-none border-t border-muted">
+        <Education />
+      </div>
+      
+
+      <div className="mx-auto flex flex-col max-w-xl gap-6 py-8 my-8 lg:max-w-none border-t border-muted">
+      <Career />
+      </div>
+      
+
     </Container>
   )
 }

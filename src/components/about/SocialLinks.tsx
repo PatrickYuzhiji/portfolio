@@ -23,7 +23,7 @@ export default function SocialLinks() {
           </Link>
         ))}
       </div>
-      <div className="mt-8 border-t pt-8 ">
+      <div className="mt-4 border-t pt-4 ">
         <Link
           href={`mailto:${email}`}
           className="group flex flex-row ml-3 justify-start items-center text-md font-medium transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
@@ -32,6 +32,20 @@ export default function SocialLinks() {
           <span className="ml-4">{email}</span>
         </Link>
       </div>
+
+                 {/* Download Resume Button */}
+         <div className="mt-4 border-t pt-4 ">
+         <Link
+           href="/file/Patrick_Yu_Resume_transcript.pdf"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Download Resume"
+           className="group flex flex-row ml-3 justify-start items-center text-md font-medium transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+         >
+           <CustomIcon name="readcv" size={22} />
+           <span className="ml-4">Download Résumé</span>
+         </Link>
+         </div>
     </div>
 
   )

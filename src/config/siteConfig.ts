@@ -22,17 +22,22 @@ export const footerItems: Array<NavItemType> = [
     href: '/projects'
   },
   {
-    name: 'Blogs',
-    href: '/blogs'
-  },
-  {
-    name: 'Friends',
-    href: '/friends'
-  },
-  {
-    name: 'Changelog',
-    href: '/changelog'
+    name: 'Contact',
+    href: '/contact'
   }
+  // ,
+  // {
+  //   name: 'Blogs',
+  //   href: '/blogs'
+  // },
+  // {
+  //   name: 'Friends',
+  //   href: '/friends'
+  // },
+  // {
+  //   name: 'Changelog',
+  //   href: '/changelog'
+  // }
 ]
 
 export const navItems: Array<NavItemType> = [
@@ -49,7 +54,12 @@ export const navItems: Array<NavItemType> = [
     href: '/projects'
   },
   {
-    name: 'Blogs',
-    href: '/blogs'
+    name: 'Contact',
+    href: '/contact'
   }
+  // ,
+  // {
+  //   name: 'Blogs',
+  //   href: '/blogs'
+  // }
 ]

@@ -5,18 +5,20 @@ export type EducationItemType = {
     major: string
     image?: string
     logo: string
-    start: string
-    end: string
+    duration: string
+    description: string[]
   }
   
   
   
   export const educationList: Array<EducationItemType> = [
-    {
-      school: 'Southern University of Science and Technology',
-      major: 'Computer Science and Technology',
-      logo: 'college',
-      start: '2016',
-      end: '2020'
-    },
-  ]
+  {
+    school: 'University of Wollongong',
+    major: 'Master of Computer Science',
+    logo: '/images/icon/uow.jpg',
+    duration: '2023 - 2025',
+    description: [
+      "GPA: 6.88/7.0",
+    ]
+  },
+]
