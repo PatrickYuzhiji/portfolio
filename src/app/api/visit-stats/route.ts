@@ -4,6 +4,7 @@ const OPENPANEL_API_URL = 'https://api.openpanel.dev';
 const OPENPANEL_CLIENT_ID = process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID;
 const OPENPANEL_SECRET_ID = process.env.OPENPANEL_API_SECRET_ID;
 const OPENPANEL_PROJECT_ID = process.env.OPENPANEL_PROJECT_ID;
+
 export async function GET() {
   try {
     // 获取总访问数据

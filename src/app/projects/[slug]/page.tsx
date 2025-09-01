@@ -5,6 +5,48 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeftIcon, ExternalLinkIcon, GithubIcon, HashIcon } from 'lucide-react'
 import { projects, projectsWeb, projectsMobile, projectsMore, ProjectItemType } from '@/config/projects'
+import { TechIcon } from '@/components/shared/TechIcon'
+
+// Map tech names to SimpleIcons slugs
+function getTechIconSlug(tech: string): string | null {
+  const techMap: Record<string, string> = {
+    'NextJS': 'nextdotjs',
+    'TypeScript': 'typescript',
+    'TailwindCSS': 'tailwindcss',
+    'SanityCMS': 'sanity',
+    'Resend': 'resend',
+    'Vercel': 'vercel',
+    'PHP': 'php',
+    'MySQL': 'mysql',
+    'HTML': 'html5',
+    'CSS': 'css3',
+    'JavaScript': 'javascript',
+    'React': 'react',
+    'Bootstrap': 'bootstrap',
+    'Vite': 'vite',
+    'Python': 'python',
+    'FastAPI': 'fastapi',
+    'SQLAlchemy': 'sqlalchemy',
+    'Docker': 'docker',
+    'jQuery': 'jquery',
+    'Postman': 'postman',
+    'AWS': 'amazonaws',
+    'Serverless': 'serverless',
+    'Axios': 'axios',
+    'PostgreSQL': 'postgresql',
+    'ReactNative': 'react',
+    'Expo': 'expo',
+    'ONNX': 'onnx',
+    'R': 'r',
+    'RStudio': 'rstudio',
+    'Markdown': 'markdown',
+    'Scrapy': 'scrapy'
+  };
+  
+  return techMap[tech] || null;
+}
+
+
 
 type Props = {
   params: { slug: string }
@@ -111,7 +153,30 @@ export default function ProjectDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* tech stack logo section  */}
+        {/* Tech Stack Icons */}
+        {project.techStack && project.techStack.length > 0 && (
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Tech Stack</h2>
+            <div className="flex flex-wrap gap-3">
+              {project.techStack.map((tech) => {
+                // Map tech names to SimpleIcons slugs
+                const iconSlug = getTechIconSlug(tech);
+                return (
+                  <div
+                    key={tech}
+                    className="flex items-center gap-2 px-4 py-2 bg-muted/50 border border-muted-foreground/20 rounded-xl hover:bg-muted/80 transition-colors"
+                  >
+                    <div className="w-5 h-5 flex items-center justify-center">
+                      <TechIcon tech={tech} iconSlug={iconSlug} />
+                    </div>
+                    <span className="text-sm font-medium text-foreground">{tech}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
         
 
         {/* Project Details */}
@@ -131,25 +196,7 @@ export default function ProjectDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* Technologies Used */}
-        {project.techStack && project.techStack.length > 0 && (
-          <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Technologies Used</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech) => (
-                <div
-                  key={tech}
-                  className="flex items-center gap-1 px-3 py-1.5 bg-muted text-muted-foreground rounded-lg text-sm hover:bg-muted/80 transition-colors"
-                >
-                  <HashIcon className="w-3 h-3" />
-                  {tech}
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Project Links section removed - moved to top */}
+        
       </div>
     </SimpleLayout>
   )

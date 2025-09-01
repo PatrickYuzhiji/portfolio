@@ -140,7 +140,7 @@ export const projectsMobile: Array<ProjectItemType> = [
          "Integrated gamification through point-based participation rewards, enhancing student engagement within communities",
          "Collaborated within a 5-person interdisciplinary team and received supervision from Prof. Lei Wang, achieving High Distinction for innovation and impact"
        ],
-       techStack: ['FastAPI', 'React', 'PostgreSQL', 'Python', 'TypeScript'],
+       techStack: ['FastAPI', 'React', 'PostgreSQL', 'Python', 'TypeScript', 'Expo'],
        logo: '/images/icon/SLACA-logo.png',
        screenshot: '/images/projects/SLACA.webp',
      },

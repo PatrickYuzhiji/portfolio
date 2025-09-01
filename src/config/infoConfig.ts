@@ -85,7 +85,24 @@ export const techIcons = [
   "androidstudio",
   "ios",
   "apple",
-  "wechat"
+  "wechat",
+  "tailwindcss",
+  "php",
+  "html5",
+  "css3",
+  "bootstrap",
+  "vite",
+  "python",
+  "fastapi",
+  "sqlalchemy",
+  "jquery",
+  "postman",
+  "aws",
+  "reactnative",
+  "expo",
+  "r",
+  "markdown",
+  "scrapy"
 ];
 
 
