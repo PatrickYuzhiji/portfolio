@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { site_url } from "@/config/siteConfig";
 
 /**
  * Google's limit is 50,000 URLs per sitemap
@@ -14,32 +13,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 	const sitemapRoutes: MetadataRoute.Sitemap = [
 		{
-			url: "", // home
+			url: "https://www.patrickyu.work", // home
 			lastModified: new Date(),
+			changeFrequency: "weekly",
+			priority: 1.0,
 		},
 		{
-			url: "projects",
+			url: "https://www.patrickyu.work/projects",
 			lastModified: new Date(),
+			changeFrequency: "weekly",
+			priority: 0.8,
 		},
 		{
-			url: "about",
+			url: "https://www.patrickyu.work/about",
 			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.7,
 		},
 		{
-			url: "contact",
+			url: "https://www.patrickyu.work/contact",
 			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.6,
 		},
 	];
 
 	for (const route of sitemapRoutes) {
-		// console.log(`sitemap, url:${site_url}/${route.url}`);
 		sitemapList.push({
-			url: `${site_url}/${route.url}`,
+			url: route.url,
 			lastModified: new Date(route.lastModified || new Date()).toISOString(),
+			changeFrequency: route.changeFrequency,
+			priority: route.priority,
 		});
 	}
-
-
 
 	console.log("sitemap end, size:", sitemapList.length);
 	return sitemapList;

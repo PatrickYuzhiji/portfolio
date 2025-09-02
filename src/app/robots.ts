@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import { site_url }from "@/config/siteConfig";
-
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,13 +8,23 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: [
           "/api/*",
-          "/admin/*",
           "/_next/*",
           "/*.json$",
           "/cdn-cgi/*",
+          "/.env*",
+          "/.git*",
+        ]
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: [
+          "/api/*",
+          "/_next/*",
         ]
       },
     ],
-    sitemap: `${site_url}/sitemap.xml`,
+    sitemap: "https://www.patrickyu.work/sitemap.xml",
+    host: "https://www.patrickyu.work",
   };
 }

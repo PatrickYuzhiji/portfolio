@@ -15,8 +15,37 @@ import SocialLinks from '@/components/about/SocialLinks'
 
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'Hi, I am Patrick Zhiji Yu, a software engineer based in Sydney, Australia.',
+  description: 'Hi, I am Patrick Zhiji Yu, a software engineer based in Sydney, Australia. Learn about my background, education, career experience, and technical skills.',
+  keywords: [
+    'Patrick Zhiji Yu',
+    'Software Engineer Sydney',
+    'Computer Science Graduate',
+    'University of Wollongong',
+    'Full-Stack Developer',
+    'React Developer',
+    'Next.js Developer',
+    'Portfolio About'
+  ],
+  openGraph: {
+    title: 'About Patrick Zhiji Yu - Software Engineer',
+    description: 'Hi, I am Patrick Zhiji Yu, a software engineer based in Sydney, Australia. Learn about my background, education, career experience, and technical skills.',
+    url: 'https://www.patrickyu.work/about',
+    type: 'profile',
+    images: [
+      {
+        url: 'https://www.patrickyu.work/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Patrick Zhiji Yu - Software Engineer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Patrick Zhiji Yu - Software Engineer',
+    description: 'Hi, I am Patrick Zhiji Yu, a software engineer based in Sydney, Australia. Learn about my background, education, career experience, and technical skills.',
+    images: ['https://www.patrickyu.work/images/og-image.jpg'],
+  },
 }
 
 export default function About() {
