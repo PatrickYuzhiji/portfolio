@@ -7,7 +7,7 @@ import Career from '@/components/home/Career'
 import Education from '@/components/home/Education'
 import { Container } from '@/components/layout/Container'
 
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait.webp'
 import SocialLinks from '@/components/about/SocialLinks'
 
 
