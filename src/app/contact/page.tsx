@@ -2,8 +2,10 @@
 import React from "react";
 import { useState } from "react";
 import { Container } from '@/components/layout/Container'
+import { useOpenPanelTracking } from '@/hooks/useOpenPanel'
 
 export default function ContactForm() {
+  const op = useOpenPanelTracking();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     subject: "",
@@ -37,6 +39,9 @@ export default function ContactForm() {
       const data = await response.json();
       console.log("Email sent successfully:", data);
 
+      // Track successful form submission
+      op.trackContactFormSubmission(formData.subject);
+      
       // Show success notification
       setNotification({
         show: true,

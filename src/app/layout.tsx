@@ -4,6 +4,7 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/layout/Layout'
 import { Analytics } from "@/components/analytics/analytics";
 import { StructuredData } from '@/components/seo/StructuredData'
+import { OpenPanelComponent } from '@openpanel/nextjs'
 import { name, headline, introduction } from '@/config/infoConfig'
 import '@/styles/tailwind.css'
 
@@ -91,6 +92,12 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full">
         <Providers>
+          <OpenPanelComponent
+            clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID!}
+            trackScreenViews={true}
+            trackOutgoingLinks={true}
+            trackAttributes={true}
+          />
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>
