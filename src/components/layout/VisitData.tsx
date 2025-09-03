@@ -33,8 +33,8 @@ export default function VisitData() {
 
   return (
     <div className="flex flex-row items-center justify-center gap-2 text-sm text-gray-500 mt-2">
-      <Eye size={16} weight="duotone" />
-      Total Visits: {stats.totalUV} / Today Visits: {stats.dailyUV}
+      {/* <Eye size={16} weight="duotone" /> */}
+      {/* Total Visits: {stats.totalUV} / Today Visits: {stats.dailyUV} */}
     </div>
   );
 }

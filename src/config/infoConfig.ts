@@ -13,9 +13,10 @@ export const githubUsername = 'PatrickYuzhiji'
 // about page
 export const aboutMeHeadline = "I'm Patrick Zhiji Yu, a software engineer based in Sydney."
 export const aboutParagraphs = [
-  "I just finished my master's degree in Computer Science at the University of Wollongong.",
-  "I keep building side projects in my spare time.",
-  "Sometimes I like to cook, sometimes I like to travel, but always I like to take a walk in nature."
+  "I recently completed my Master’s degree in Computer Science at the University of Wollongong.",
+  "I enjoy building side projects in my spare time, exploring new tools and ideas.",
+  "Outside of tech, I love cooking, traveling, and especially taking long walks in nature.",
+  "I'm proud to be part of the LGBTQ+ 🌈 community and passionate about fostering inclusive and welcoming spaces."
 ]
 
 
