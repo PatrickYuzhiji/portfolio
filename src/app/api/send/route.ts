@@ -3,7 +3,14 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only when needed, not at module load time
+function getResend() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY environment variable is not set');
+  }
+  return new Resend(apiKey);
+}
 
 export async function POST(req: Request) {
   try {
@@ -20,6 +27,8 @@ export async function POST(req: Request) {
     }
 
     try {
+      const resend = getResend();
+      
       // Send notification email to Patrick
       const businessEmail = await resend.emails.send({
         from: "hi@patrickyu.work",
