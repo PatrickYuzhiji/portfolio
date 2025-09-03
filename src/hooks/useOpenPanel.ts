@@ -37,7 +37,6 @@ export function useOpenPanelTracking() {
   return {
     ...op,
     trackProjectView,
-    trackProjectView,
     trackContactFormSubmission,
     trackPageView,
     trackDownload
