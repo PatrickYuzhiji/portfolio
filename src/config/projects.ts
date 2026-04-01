@@ -159,7 +159,7 @@ export const projectsMobile: Array<ProjectItemType> = [
        ],
        techStack: ['ReactNative', 'Expo', 'ONNX'],
        logo: '/images/icon/SwellApp-logo.png',
-       screenshot: '/images/projects/SoilSwellApp.webp',
+       screenshot: '/images/projects/SwellApp-logo.webp',
      },
    ]
 
